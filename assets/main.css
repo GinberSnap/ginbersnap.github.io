@@ -651,11 +651,17 @@ video {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.pb-4 {
+  padding-bottom: 1rem;
+}
 .pb-5 {
   padding-bottom: 1.25rem;
 }
 .pt-4 {
   padding-top: 1rem;
+}
+.pt-6 {
+  padding-top: 1.5rem;
 }
 .text-center {
   text-align: center;
@@ -718,6 +724,29 @@ video {
 }
 .outline {
   outline-style: solid;
+}
+
+
+
+/* --- Custom Styles Below --- */
+
+h2.sub {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+li {
+    margin-left: 2rem;
+    list-style-type: disc;
+    padding-bottom: 1.25rem;
+}
+body ol.decimal li {
+    list-style-type: decimal;
+    padding-bottom: .75rem;
+}
+body ol.decimal li em {
+    font-weight: bold;
 }
 .hover\:bg-zinc-100:hover {
   --tw-bg-opacity: 1;
