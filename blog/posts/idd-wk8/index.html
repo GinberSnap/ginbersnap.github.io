@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>IDD (Wk8): Instructional Design Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" type="text/css" href="/assets/main.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/custom.css" />
+
+    <script>  
+      // Remove this script if you don't need the dark mode toggle  
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+        
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+
+      const toggleDarkMode = function(){
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.theme = 'light';      
+        } else {
+          document.documentElement.classList.add('dark')
+          localStorage.theme = 'dark'
+        }
+      };   
+
+      const forgetPref = function(){
+        localStorage.removeItem('theme')
+        window.location.reload()
+      }
+    </script>
+
+  </head>
+  <body class="flex flex-col min-h-screen dark:bg-zinc-800 dark:text-white">
+    <nav class="flex items-center justify-between flex-wrap px-5 py-3 border-b gap-5 dark:border-zinc-900">
+  <a href="/" class="font-semibold text-xl tracking-tight">Instructional Design</a>
+
+  
+  <ul class="flex items-center gap-3 flex-wrap">
+    
+      <li class="inline">
+        <a
+          href="/learning-theory/"
+          class="uppercase text-sm py-1 px-2 rounded inline-block
+          
+            text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700
+          ">
+          Learning Theory
+        </a>
+      </li>
+    
+      <li class="inline">
+        <a
+          href="/instructional-design-models/"
+          class="uppercase text-sm py-1 px-2 rounded inline-block
+          
+            text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700
+          ">
+          Instructional Design Models
+        </a>
+      </li>
+    
+      <li class="inline">
+        <a
+          href="/digital-media-design/"
+          class="uppercase text-sm py-1 px-2 rounded inline-block
+          
+            text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700
+          ">
+          Digital Media Design
+        </a>
+      </li>
+    
+      <li class="inline">
+        <a
+          href="/capstone/"
+          class="uppercase text-sm py-1 px-2 rounded inline-block
+          
+            text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700
+          ">
+          Capstone
+        </a>
+      </li>
+    
+      <li class="inline">
+        <a
+          href="/idd/"
+          class="uppercase text-sm py-1 px-2 rounded inline-block
+          
+            text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700
+          ">
+          IDD
+        </a>
+      </li>
+    
+
+  </ul>
+
+  <button class="text-zinc-700  hover:bg-zinc-100 dark:hover:bg-zinc-700 rounded-lg text-sm p-2.5" onclick="toggleDarkMode()" id="theme-toggle" type="button">
+    <svg id="theme-toggle-dark-icon" aria-label="Toggle dark mode" class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" > <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" ></path> </svg>
+    <svg id="theme-toggle-light-icon" aria-label="Toggle light mode" class="w-5 h-5 hidden dark:block text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" > <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd" ></path> </svg>
+  </button>
+
+  
+  
+
+</nav>
+
+
+    <main class="flex-grow p-12 mt-12 w-full max-w-4xl mx-auto">
+      <h1 class="text-3xl mb-12">IDD (Wk8): Instructional Design Document</h1>
+      
+<time class="text-sm mb-8 mt-2">05-02-25</time>
+
+<article><h2 class="text-2xl mb-8 mt-2 pb-4">Instructional Design Document </h2>
+<p><span class="text-md mb-4 mt-6 font-semibold">Title: </span> Ethical Hacking 101: Becoming a Digital Detective<br><br>
+<span class="text-md mb-4 mt-4 font-semibold">Course Overview:</span> This minicourse introduces high school students to the foundational principles of ethical hacking. Designed for beginners with limited technical resources, it explores cybersecurity through a hands-on approach using freely available web-based tools requiring minimal computing power. Students will gain practical skills in ethical hacking, understand legal and ethical implications, and apply open-source intelligence (OSINT) techniques to uncover digital clues in real-world scenarios.<br>
+<br></p>
+<p><span class="text-md mb-4 mt-4 font-semibold">Knowledge Gap:</span> High school students interested in exploring ethical hacking often face barriers due to limited access to high-performance devices and high-speed internet.<br>
+<br></p>
+<p><span class="text-md mb-4 mt-4 font-semibold">Target Audience:</span><br>
+<img src="/img/educator.png" alt="Classroom" class="pic float-right ml-4"></p>
+<ul class="pt-2 compact">
+    <li><b>Age:</b> Primarily high school students (ages 14-18)</li>
+    <li><b>Background:</b> Students interested in ethical hacking who have a basic understanding of how computers and the internet work.</li>
+    <li><b>Prior Exposure to Cybersecurity:</b> Minimal or no prior exposure to ethical hacking. This course is designed for beginners with little to no experience in ethical hacking.</li>
+    <li><b>Technical Skills:</b> Basic computer usage, including web browsing and gaming.</li>
+    <li><b>Disposition towards Learning:</b> Motivation to explore ethical hacking and learn new skills in a practical, hands-on way.</li>
+    <li><b>Technology Access:</b> This course is optimized for accessibility, requiring only a standard internet connection and a basic computer, ensuring compatibility with commonly available technology.</li>
+</ul>
+<br>
+<p><span class="text-md mb-4 mt-4 font-semibold">Course Type:</span></p>
+<ul class="pt-4 compact">
+    <li><b>Learning Objectives:</b> Learning ethical hacking demands high-performance devices and high-speed bandwidth, which can present difficulties for students keen on exploring this field. To overcome this, the minicourse offers foundational ethical hacking skills through easily accessible web-based tools needing minimal technical resources.</li>
+    <li><b>Course outcome:</b> Students will learn key ethical hacking concepts, explore legal and ethical responsibilities, and apply their knowledge through hands-on, interactive tasks.</li>
+     <li><b>Target audience:</b> High school students interested in ethical hacking, but lacking access to high-performance computers or fast internet connections.</li>
+    <li><b>Course Type:</b> This minicourse follows a 'How-To Course' structure to introduce ethical hacking concepts through hands-on learning. It will cover essential ethical hacking practices, including open-source intelligence tools (OSINT), and address legal and ethical responsibilities.</li>
+</ul>
+<br>
+<img src="/img/tutorial-video.png" alt="Video Tutorial" class="pic float-right ml-4">
+<span class="text-md mb-4 mt-4 font-semibold">Modality:</span> The minicourse will use an asynchronous online learning platform, allowing students to learn independently at their own pace without real-time interaction. Some online learning platforms are open-source, readily available online, and accessible. For instance, Canvas offers accessibility features, including screen reader compatibility, tab navigation, and keyboard shortcuts.
+<br>
+<Br>
+<span class="text-md mb-4 mt-4 font-semibold">Course Learning Outcomes (CLOs):</span>
+<ul class="pt-4">
+    <li><b>CLO1:</b> By the end of the course, students will demonstrate proficiency in fundamental ethical hacking techniques and explain the role of ethical hacking in cybersecurity operations. </li>
+    <li><b>COL2:</b> By the end of the course, students will evaluate how legal and regulatory frameworks shape the scope and implementation of ethical hacking and penetration testing.</li>
+    <li><b>CLO3:</b> By the end of the course, students will apply foundational OSINT techniques to collect open-source intelligence, identify potential vulnerabilities, and recommend strategies to improve cybersecurity posture.</li>
+<br>
+<p><span class="text-md mb-6 mt-4 pb-6 font-semibold">Module Learning Objectives (MLOs):</span><br><br></p>
+<p><b>MLO1:</b> <em>Introduction to Ethical Hacking</em><br>By the end of this module, students will be able to apply foundational ethical hacking techniques, and distinguish between ethical hacking and malicious hacking practices. Successful completion of MLO1 will enable learners to meet CLO1.<br><br></p>
+<ul>
+    <li class="pb-1"><b>Learning activities:</b> Lecture using presentation</li>
+    <li><b>Assessments:</b> Multiple choice quiz will cover key terms learned during MLO1 (CLO1) </li>
+</ul>
+<br>
+<p><b>MLO2:</b> <em>Legal and ethical responsibilities</em><br>By the end of this module, students will evaluate legal and ethical challenges using a case study to demonstrate their understanding of fundamental principles and best practices. Successful completion of MLO2 will enable learners to meet CLO2.<br><br></p>
+<ul>
+    <li class="pb-1"><b>Learning activities:</b> Lecture using presentation, case study analysis, group discussion</li>
+    <li><b>Assessments:</b> Multiple choice quiz will cover key terms learned during MLO2 (CLO2) </li>
+</ul>
+<br>
+<p><b>MLO3:</b> <em>OSINT (Open Source Intelligent)</em><br>By the end of this module, students will be able to describe the role of OSINT in Ethical Hacking, utilize basic OSINT tools such as WHOIS and reverse image search, and analyze publicly available data to identify potential security insights. Successful completion of MLO3 will enable learners to meet CLO3.<br><br></p>
+<ul>
+    <li class="pb-1"><b>Learning activities:</b> Lecture using presentation,  hand-on activities</li>
+    <li><b>Assessments:</b> Multiple choice quiz will cover key terms learned during MLO3 (CLO3) </li>
+</ul>
+<br>
+<p><b>MLO4:</b> <em>Hands-on exercise</em><br>By the end of this module, students will be able to execute basic OSINT reconnaissance, utilizing passive methods, to obtain publicly accessible intelligence. Successful completion of MLO4 will enable learners to meet CLO3.<br><br></p>
+<ul>
+    <li class="pb-1"><b>Learning activities:</b> Lecture using presentation,  hand-on activities</li>
+    <li><b>Assessments:</b> Fill-in the blank questions will cover key terms learned during MLO4 (CLO3) </li>
+</ul>
+<br>
+<p><span class="text-md mb-4 mt-4 font-semibold">Subject Matter Expert Resources</span></p>
+<ul class="pt-4">
+    <li>Essential Tools and Frameworks for Mastering Ethical Hacking on Linux<br>https://www.linuxjournal.com/content/essential-tools-and-frameworks-mastering-ethical-hacking-linux</li>
+    <li>What is ethical hacking?  by  IBM<br>https://www.ibm.com/think/topics/ethical-hacking</li>
+    <li>OSINT Framework<br>https://osintframework.com/</li>
+</ul>
+<br>
+<p><span class="text-md mb-4 mt-4 font-semibold">Instructional Design Model:</span> I plan to use the Successive Approximation Model (SAM) for my minicourse. The primary reason for using SAM is its flexibility and responsiveness. Using the SAM model, instructional materials go through four key stages—Design Proof, Alpha, Beta, and Gold—before the course is officially published. This multi-stage process supports continuous refinement of course materials, which aligns well with my habit of frequently revisiting and adjusting ideas—especially important in the fast-evolving field of cybersecurity.<br>
+<br><br></p>
+<p><span class="text-md mb-4 mt-4 font-semibold">Learning Theory: </span>The minicourse will utilize constructivism. Constructivism allows students to actively construct their own understanding and knowledge through experience. The minicourse offers hands-on activities, including a photo investigation using a ethical and legal implication case study and Open Source Intelligent tools (OSINT) and practice scenarios to help students build ethical hacking skills in a practical context.<br>
+<br><br></p>
+<img src="/img/video-tutorial.png" alt="Online Tutorial" class="w-1/2 h-auto">
+<p><br><br><br></p>
+<div class="flex justify-between items-center mt-8">
+    <a href="/blog/posts/idd-wk6" class=" hover:underline">← IDD (Wk7): CLOs and MLOs</a>
+    <a href="/blog/posts/idd-wk8/" class="hidden hover:underline">IDD (Wk7):  →</a>
+</div>
+</article>
+    </main>
+
+      
+      <footer class="p-12 mt-8 w-full max-w-5xl mx-auto text-black text-center">
+
+<p class="text-sm pt-4 text-zinc-700 dark:text-zinc-200">
+    <span>© 2025. All Rights Reserved. The site content is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="hover:underline">CC BY-NC-SA 4.0</a>.</span>
+</p>
+<p class="text-sm text-zinc-700 dark:text-zinc-200">
+    This site was built by me using Hugo, with the Minimal 11ty Starter theme.
+</p>
+    <script src="/assets/main.js"></script>
+  </body>
+</html>
